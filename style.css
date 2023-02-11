@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Outfit;
+  background-color: hsl(217, 54%, 11%);
+  font-size: 18px;
+  font-weight: 300, 400, 600;
+}
+
+.nft-card {
+  position: relative;
+  top: 4rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 20px;
+  margin: auto;
+  width: 25%;
+  padding: 20px;
+  box-shadow: 1px 30px 10px 20px hsl(216, 53%, 7%);
+}
+
+.image-section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 20px;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+}
+
+.equilibrium-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.left-right{
+  margin-top: 20px;
+  display: flex;
+  gap: 40%;
+  align-items: center;
+}
+
+.left {
+  color: hsl(178, 100%, 50%);
+}
+
+hr {
+  border: 1px solid hsl(215, 32%, 27%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar-section{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px
+}
+
+.avatar {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 100%;
+  width: 55px;
+}
+
+.name {
+  color: hsl(0, 0%, 100%);
+}
+
+.fade {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 53%;
+  border-radius: 10px;
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+
+.fade:hover {
+  background-color: hsl(178, 100%, 50%, 0.4);
+}
+.icon{
+  opacity: 0;
+}
+.fade:hover .icon{
+  opacity: 1;
+}
+
+h1:hover,
+.name:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  position: relative;
+  margin-top: 6%;
+  top: 20%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-color: yellow;
+    color: hsl(18, 100%, 50%);
+  }
+}
