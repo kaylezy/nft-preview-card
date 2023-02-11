@@ -6,14 +6,14 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 - [Overview](#overview)
   - [The challenge](#nft-preview-card-challenge
-  - [Links](#github page)
+  - [Links](https://kaylezy.github.io/nft-preview-card/)
   - [Built with](#HTML AND #CSS)
   - [What I learned](#Improving in my html and css knowledge)
 - [Acknowledgments](#foster for linking me up with the project to increase my learning)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://kaylezy.github.io/nft-preview-card/)
 
 ## My process
 
@@ -33,8 +33,8 @@ I'm still working more on my responsiveness and the use of media query
 
 ## Author
 
-- Website - [Olakunle Hassan](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Olakunle Hassan](https://kaylezy.github.io/nft-preview-card/)
+- Frontend Mentor - [@kaylezy](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [New Generation King](https://www.twitter.com/iam_kaylezy) links you'd like to share.**
 
 ## Acknowledgments
