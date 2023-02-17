@@ -1,126 +1,176 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* 
+=======
+    Google-font import
+=======
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
+/* 
+=======
+    CSS Reset
+=======
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
 body {
-  font-family: Outfit;
-  background-color: hsl(217, 54%, 11%);
-  font-size: 18px;
-  font-weight: 300, 400, 600;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
 }
 
-.nft-card {
-  position: relative;
-  top: 4rem;
-  background-color: hsl(216, 50%, 16%);
-  border-radius: 20px;
-  margin: auto;
-  width: 25%;
-  padding: 20px;
-  box-shadow: 1px 30px 10px 20px hsl(216, 53%, 7%);
+:root{
+    --cyan:hsl(178, 100%, 50%);
+    --soft-blue:hsl(215, 51%, 70%);
+    --dark-blue:hsl(215, 32%, 27%);
+    --darker-blue:hsl(216, 50%, 16%);
+    --darkest-blue:hsl(217, 54%, 11%);
+    --white:hsl(0,0%,100%,0.65);
+    --whiter:hsl(0,0%,100%);
 }
 
-.image-section img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 30px;
+/* 
+    =======
+    General styling
+    =======
+*/
+body{
+    background-color: var(--darkest-blue);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    min-height: 100vh;
+    color:var(--white);
+}
+.container,
+.sale_info,
+.price,
+.time-left,
+.artist
+{
+    display: flex;
+}
+.container{
+    max-width:90rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    max-width:21.875rem;
+    padding:1.5rem;
+    margin: 1rem;
+    background-color:var(--darker-blue);
+    border-radius: 1rem;
 }
 
-h1 {
-  color: hsl(0, 0%, 100%);
-  margin-bottom: 20px;
+
+/* 
+=======
+    Item image style
+=======
+*/
+.item_image img{
+    width:100%;
+    height:100%;
+    border-radius: 0.675rem;
+}
+.item_image a{
+    display: block;
+    position: relative;
+}
+.item_image a:hover::before{
+    content: '';
+    position: absolute;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:98%;
+    border-radius: 0.675rem;
+    background-color: hsl(178, 100%, 50%,0.4);
+    background-image: url(../images/icon-view.svg );
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-p {
-  color: hsl(215, 51%, 70%);
+.item_title,
+.item_description,
+.sale_info,
+.artist{
+    padding-top:1.5rem;
 }
 
-.equilibrium-section{
-  display: flex;
-  flex-direction: column;
+/* 
+    ========
+        Item info style
+    ========
+*/
+.item_title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    width:90%;
+    color:var(--whiter)
 }
+.item_info a{text-decoration: none;}
+.item_info a h1:hover{color:hsl(178, 100%, 50%,0.6);}
 
-.left-right{
-  margin-top: 20px;
-  display: flex;
-  gap: 40%;
-  align-items: center;
+/* 
+    ========
+        Sale info style
+    ========
+*/
+.sale_info{
+    padding-bottom: 1rem;
+    gap:3rem;
+    border-bottom: 2px solid var(--dark-blue);
 }
+.price,
+.time-left{
+    flex: 50;
+}
+.price img,
+.time-left img{ 
+    height: 100%;
+    padding-right:0.6rem ;
+}
+.price p{color:var(--cyan);}
 
-.left {
-  color: hsl(178, 100%, 50%);
+/* 
+    ========
+    Artist style
+    ========
+*/
+.artist img{
+    width: 15%;
+    border:2px solid var(--whiter);
+    border-radius: 50%
 }
+.artist p a{text-decoration: none;}
+.artist p a span:hover{color:hsl(178, 100%, 50%,0.6);}
+.artist p{padding: 0.6rem 0 0 1rem;}
+.artist_name{color:var(--whiter);}
 
-hr {
-  border: 1px solid hsl(215, 32%, 27%);
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.avatar-section{
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 20px
-}
-
-.avatar {
-  border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 100%;
-  width: 55px;
-}
-
-.name {
-  color: hsl(0, 0%, 100%);
-}
-
-.fade {
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  height: 53%;
-  border-radius: 10px;
-  cursor: pointer; 
-  display: flex;
-  justify-content: center;
-align-items: center;
-}
-
-.fade:hover {
-  background-color: hsl(178, 100%, 50%, 0.4);
-}
-.icon{
-  opacity: 0;
-}
-.fade:hover .icon{
-  opacity: 1;
-}
-
-h1:hover,
-.name:hover {
-  cursor: pointer;
-  color: hsl(178, 100%, 50%);
-}
 
 .attribution {
-  position: relative;
-  margin-top: 6%;
-  top: 20%;
-  font-size: 11px;
-  text-align: center;
+    font-size: 1rem; 
+    text-align: center; 
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-@media screen and (max-width: 400px) {
-  body {
-    background-color: yellow;
-    color: hsl(18, 100%, 50%);
-  }
+    color: hsl(228, 45%, 44%); 
 }
