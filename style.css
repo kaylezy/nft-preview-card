@@ -104,7 +104,7 @@ body{
     height:98%;
     border-radius: 0.675rem;
     background-color: hsl(178, 100%, 50%,0.4);
-    background-image: url(../images/icon-view.svg );
+    background-image: url(images/icon-view.svg );
     background-position: center;
     background-repeat: no-repeat;
 }
